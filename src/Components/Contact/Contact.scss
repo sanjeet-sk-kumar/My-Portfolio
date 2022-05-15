@@ -1,0 +1,356 @@
+.page-contact {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.page-contact .text-zone {
+  width: 50%;
+  z-index: 2;
+  background-color: #1d1d1d;
+  padding: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  max-width: 55rem;
+  box-sizing: border-box;
+}
+
+.page-contact .text-zone + div {
+  width: 50%;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.page-contact .text-zone + div #map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.text-zone header {
+  position: relative;
+}
+
+.text-zone p {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  width: 100%;
+  padding-top: 5rem;
+  display: block;
+  position: relative;
+}
+
+.contact-form form {
+  position: relative;
+}
+
+.contact-form form::before {
+  content: "<form>";
+  font-family: "La Belle Aurore", cursive;
+  color: #539cd4;
+  font-size: 18px;
+  position: absolute;
+  bottom: 100%;
+  left: -1rem;
+}
+
+.contact-form form::after {
+  display: block !important;
+  content: "</form>";
+  font-family: "La Belle Aurore", cursive;
+  color: #539cd4;
+  font-size: 18px;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+}
+
+.contact-form ul {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 10px;
+  //   opacity: 0;
+  overflow: hidden;
+  display: block;
+  clear: both;
+  position: relative;
+}
+
+.contact-form ul li.half {
+  width: 49%;
+  margin-left: 2%;
+  float: left;
+  clear: none;
+}
+
+.contact-form ul li.half:first-child {
+  margin-left: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 100%;
+  border: 0;
+  background: #2b2b2b;
+  height: 50px;
+  font-size: 16px;
+  color: #8d8d8d;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: 0;
+  background: #2b2b2b;
+  height: 50px;
+  font-size: 16px;
+  color: #8d8d8d;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 150px;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.input__label--hoshi::after {
+  margin-top: 2px;
+  border-bottom: 4px solid #08fdd8;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.input__label--hoshi-color-2::after {
+  border-color: #0fa;
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+  transform: translate3d(0, 0, 0);
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+input {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input[type="hidden"] {
+  appearance: none;
+  background-color: initial;
+  cursor: default;
+  display: none !important;
+  padding: initial;
+  border: initial;
+}
+
+// Button CSS
+.contact-form .flat-button {
+  float: right;
+}
+.flat-button:hover {
+  color: #000;
+}
+
+.flat-button {
+  color: #08fdd8;
+  font-size: 17px;
+  letter-spacing: 4px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+}
+
+.flat-button div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.flat-button:hover span.bg {
+  width: 110%;
+}
+
+.flat-button span.bg {
+  left: -5%;
+  position: absolute;
+  background: #08fdd8;
+  width: 0;
+  height: 100%;
+  z-index: 3;
+  transition: 0.3s ease-out all;
+  transform: skewX(-10deg);
+}
+
+.flat-button span.text {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.flat-button span.base {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border: 1px solid #08fdd8;
+}
+
+.flat-button span.text:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  background: #08fdd8;
+  position: absolute;
+  transition: 0.3s ease-out all;
+  z-index: 5;
+}
+
+// Button CSS Ends Here
+
+.info-map {
+  position: absolute;
+  background-color: #000;
+  top: 50px;
+  left: 5rem;
+  z-index: 50;
+  width: 230px;
+  padding: 20px;
+  color: #ffff;
+  font-family: "Helvetica";
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: backInDown 1s 1.5s;
+  animation-fill-mode: forwards;
+}
+.info-map.show {
+  // opacity: 1;
+  transform: translateY(0);
+}
+
+.fall-down {
+  animation: fade 1s 1.2s infinite alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+}
+.info-map span {
+  font-size: 16px;
+  display: block;
+  padding-top: 20px;
+  color: #08fdd8;
+}
+
+.map-wrap {
+  background: #1d1d1d;
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.leaflet-control {
+  display: none !important;
+}
+
+.leaflet-pane {
+  z-index: 0 !important;
+}
+
+// Media Query for Mobile Devices
+@media (max-width: 480px) {
+  .text-zone h2,
+  h2 {
+    font-size: 2rem;
+    line-height: 6.2rem;
+  }
+  .page-contact {
+    display: block;
+  }
+
+  .page-contact .text-zone {
+    width: 100%;
+  }
+
+  .page-contact .text-zone + div {
+    position: relative !important;
+    left: 0;
+    margin-top: 4rem;
+    height: 50rem;
+    width: 100%;
+  }
+
+  .info-map {
+    top: 10px;
+    left: 1rem;
+  }
+}

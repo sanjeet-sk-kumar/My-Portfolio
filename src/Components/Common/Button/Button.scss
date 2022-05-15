@@ -1,0 +1,59 @@
+.link-button {
+  margin: 50px 0 0;
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  letter-spacing: 3px;
+  position: relative;
+  text-align: center;
+  color: #08fdd8;
+  opacity: 0;
+  animation: fadeIn 1s 4.1s forwards;
+}
+
+.link-button div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-button span.bg {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: -5px;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: #08fdd8;
+  transform: skewX(-19deg);
+}
+
+.link-button:hover span.bg {
+  width: 110%;
+}
+
+.link-button span.base {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border: 1px solid #08fdd8;
+  box-sizing: border-box;
+}
+
+.link-button span.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.link-button:hover span.text {
+  color: #1d1d1d;
+}

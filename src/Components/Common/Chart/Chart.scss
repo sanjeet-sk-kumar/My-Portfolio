@@ -1,0 +1,102 @@
+.chart {
+  margin-bottom: 1.4rem;
+}
+
+.chart .info {
+  font-size: 24px;
+  font-family: Coolvetica;
+  margin-bottom: 7px;
+  opacity: 0;
+  animation: showText 0.5s 0.8s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line {
+  height: 2px;
+  width: 100%;
+  background: #373737;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  //   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+  // 0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 2s ease-out forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 2s 0.8s ease-out forwards;
+}
+
+.progress-line span[data-descr]:hover::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  //   border-top-color: #e94f6a;
+  border-top-color: var(--bgcolor);
+  //   opacity: 0;
+  animation: showText2 0.5s 2s linear forwards;
+}
+// .progress-line span[data-descr]::after {
+//   position: absolute;
+//   content: attr(data-descr);
+//   top: -28px;
+//   right: 0;
+//   font-weight: 500;
+//   background: #ffffcc;
+//   color: #000000;
+//   padding: 1px 8px;
+//   font-size: 12px;
+//   border-radius: 3px;
+//   opacity: 0;
+//   animation: showText2 0.5s 2s linear forwards;
+// }
+
+.progress-line span[data-descr]:hover::after,
+.progress-line span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background-color: var(--bgcolor);
+  font-weight: 500;
+  color: rgb(9, 14, 15);
+  padding: 1px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+// .progress-line.html span::after {
+//   content: "90%";
+// }

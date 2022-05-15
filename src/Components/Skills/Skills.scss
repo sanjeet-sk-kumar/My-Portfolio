@@ -1,0 +1,83 @@
+.page-skills {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-skills .text-zone + div {
+  padding-right: 5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-skills .text-zone {
+  width: 50%;
+  padding-right: 5rem;
+}
+
+.section-full .text-zone {
+  padding-left: 5rem;
+}
+
+.work-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+a:hover {
+  color: #019e86;
+}
+
+// Media Query for Mobile Devices
+@media (max-width: 480px) {
+  .text-zone h2,
+  h2 {
+    font-size: 1.9rem;
+    line-height: 5.2rem;
+  }
+
+  .page-skills .text-zone {
+    width: 100%;
+  }
+
+  .page-skills .text-zone + div {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .page-skills {
+    display: block;
+  }
+
+  .work-row {
+    margin-top: 2rem;
+  }
+  .work-card {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .work-card header {
+    font-size: 1.5rem;
+  }
+  .work-card section {
+    font-size: 1.4rem;
+  }
+
+  .work-card section time {
+    font-size: 1.2rem;
+  }
+
+  .work-card footer {
+    font-size: 1rem;
+  }
+
+  #sound {
+    font-size: 12px;
+    padding: 4px;
+  }
+}

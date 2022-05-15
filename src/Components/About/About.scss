@@ -1,0 +1,141 @@
+.page-about {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-loaded .section-full {
+  opacity: 1;
+}
+
+.page-about .text-zone {
+  width: 40%;
+}
+
+.section-full .text-zone {
+  padding-left: 5rem;
+}
+
+.page-about h2,
+.page-about .fake-h2 {
+  font-family: "Coolvetica";
+  color: #08fdd8;
+  font-weight: 400;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 40px;
+  left: -10px;
+  font-size: 6.3rem;
+  line-height: 6.7rem;
+}
+
+.page-about h2::before {
+  content: "<h2>";
+  font-family: "La Belle Aurore", cursive;
+  color: #539cd4;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -4rem;
+  left: -1rem;
+}
+
+.page-about h2::after {
+  content: "</h2>";
+  font-family: "La Belle Aurore", cursive;
+  color: #539cd4;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  bottom: -4rem;
+}
+
+.page-about .fake-h2 {
+  display: none;
+}
+
+// .text-zone p {
+//   position: relative;
+//   margin-bottom: 1.5rem;
+// }
+// .text-zone p:first-of-type::before {
+//   content: "<p>";
+//   font-family: "La Belle Aurore", cursive;
+//   color: #539cd4;
+//   font-size: 18px;
+//   position: absolute;
+//   margin-top: -1rem;
+//   left: -1rem;
+// }
+
+// .text-zone p:last-of-type::after {
+//   content: "</p>";
+//   font-family: "La Belle Aurore", cursive;
+//   color: #539cd4;
+//   font-size: 18px;
+//   position: absolute;
+//   left: -1rem;
+//   bottom: -2rem;
+// }
+
+.skills-charts {
+  width: 60%;
+  flex: 1 1 auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+// Media Query for Mobile Devices
+@media (max-width: 480px) {
+  .text-zone h2,
+  h2 {
+    font-size: 2.2rem;
+    line-height: 6.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page-about {
+    display: block;
+  }
+  .page-about .text-zone {
+    width: 100%;
+  }
+
+  .page-about .skills-charts {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .text-zone h2,
+  h2 {
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+  }
+  .section-full {
+    padding: 9rem 3rem;
+  }
+  .section-full .text-zone {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .skills-charts {
+    width: 50%;
+  }
+  .section-full .text-zone {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .page-about h2 {
+    font-size: 5.3rem;
+    line-height: 6rem;
+  }
+}
