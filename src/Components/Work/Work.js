@@ -3,10 +3,8 @@ import "./Work.scss";
 import styled from "styled-components";
 import WorkCard from "../WorkCard/WorkCard";
 import Card from "../Common/Card/Card";
-import { Blogs } from "../../data/BlogData";
 import { Work } from "../../data/WorkData";
 import Anchor from "../Common/Anchor/Anchor";
-import Particle from "../Common/Particle/Particle";
 import { motion } from "framer-motion";
 import S from "../../assets/images/s.png";
 
@@ -114,7 +112,6 @@ const WorkComponent = () => {
       className="section-full"
       style={{ position: "relative", height: "auto" }}
     >
-      <Particle />
       <Box>
         {/* <Anchor /> */}
         <Center>

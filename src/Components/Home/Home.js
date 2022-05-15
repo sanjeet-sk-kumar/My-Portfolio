@@ -1,18 +1,8 @@
 import React, { useEffect, useState, Suspense } from "react";
-import { Link } from "react-router-dom";
-import { FaArrowDown } from "react-icons/fa";
 import Button from "../Common/Button/Button";
 import AnimateLetters from "../Common/AnimateLetters/AnimateLetters";
 import "./Home.scss";
-import tagCanvas from "tag-canvas";
-// import TagCanvas from "jquery-tagcanvas";
-import MagicWallItem from "../Common/MagicWallItem/MagicWallItem";
 import logoS from "../../assets/images/s.png";
-import Skills from "../Skills/Skills";
-import Work from "../Work/Work";
-
-const About = React.lazy(() => import("../About/About"));
-const Contact = React.lazy(() => import("../Contact/Contact"));
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = ["a", "n", "j", "e", "e", "t", ","];
@@ -97,22 +87,7 @@ const Home = () => {
           <br />
           <Button to="/contact" text="Contact Me" />
         </div>
-        {/* <div className="scroll-down scroll-down-left">
-          <span>scroll down</span>
-          <FaArrowDown className="fas" />
-        </div>
-        <div className="scroll-down">
-          <span>scroll down</span>
-          <FaArrowDown className="fas" />
-        </div> */}
       </section>
-
-      {/* <Suspense fallback={<div>Loading...</div>}>
-        <About />
-        <Skills />
-        <Work />
-        <Contact />
-      </Suspense> */}
     </>
   );
 };
