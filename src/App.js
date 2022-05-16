@@ -1,5 +1,7 @@
 import "./App.scss";
 import React from "react";
+import HashLoader from "react-spinners/HashLoader";
+import { css } from "@emotion/react";
 // import Home from "./Components/Home/Home";
 // import Layout from "./Components/Layout/Layout";
 // import Contact from "./Components/Contact/Contact";
@@ -15,10 +17,18 @@ const Contact = React.lazy(() => import("./Components/Contact/Contact"));
 const Skills = React.lazy(() => import("./Components/Skills/Skills"));
 const Work = React.lazy(() => import("./Components/Work/Work"));
 
+const override = css`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+`;
+
 function App() {
   return (
     <div className="App">
-      <React.Suspense fallback={<p>Loading...</p>}>
+      <React.Suspense
+        fallback={<HashLoader color="#08FDD8" css={override} size={150} />}
+      >
         <Routes>
           <Route exact path="/" element={<Layout />}>
             <Route index element={<Home />}></Route>
