@@ -103,6 +103,20 @@ a {
     font-size: 1.1rem;
     line-height: 3.1rem;
   }
+
+  .main-menu a img {
+    height: 80px;
+    width: 60px;
+  }
+
+  .main-menu .logo span {
+    font-size: 1.5rem;
+  }
+
+  .main-menu__top > span {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
 }
 
 /* Media Query for Laptops and Desktops */

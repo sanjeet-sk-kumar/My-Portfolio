@@ -47,12 +47,13 @@ const Title = styled.h2`
   margin: 0;
   padding: 0;
   @media (max-width: 480px) {
-    line-height: 1.5rem;
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
   }
 `;
 
 const Description = styled.h4`
-  font-size: calc(0.7em + 0.3vw);
+  font-size: 1rem;
   font-family: "Karla", sans-serif;
   font-weight: 500;
   margin: 0;

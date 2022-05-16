@@ -330,9 +330,10 @@ input[type="hidden"] {
 @media (max-width: 480px) {
   .text-zone h2,
   h2 {
-    font-size: 2rem;
-    line-height: 6.2rem;
+    font-size: 2rem !important;
+    line-height: 6.2rem !important;
   }
+
   .page-contact {
     display: block;
   }
@@ -351,6 +352,25 @@ input[type="hidden"] {
 
   .info-map {
     top: 10px;
-    left: 1rem;
+    left: 0.3rem;
+    font-size: 1rem;
+    background-color: #282828eb;
+    animation: fadeIn 1s 1s forwards;
+  }
+
+  .contact-form ul li.half {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .flat-button {
+    float: left;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    max-width: 50%;
+    height: 47px;
+    line-height: 50px;
+    margin-bottom: 10px;
   }
 }
