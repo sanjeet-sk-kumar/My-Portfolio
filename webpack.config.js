@@ -20,10 +20,7 @@ module.exports = {
     publicPath: "/",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    "@emotion",
-  ],
+  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
   devServer: {
     historyApiFallback: true,
   },
