@@ -31,8 +31,27 @@
   line-height: 1.8rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media (min-width: 1300px) {
   .work-card {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .work-card header {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+  .work-card section {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .work-card section time {
+    font-size: 1rem;
+  }
+
+  .work-card footer {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
   }
 }

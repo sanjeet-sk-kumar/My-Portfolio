@@ -8,9 +8,8 @@ const Header = styledComponents.h2`
     font-weight: 400;
     margin-top: 0;
     position: relative;
-    margin-bottom: 40px;
     left: -10px;
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => (props.fontsize ? props.fontSize : "6.3rem")};
     line-height: 6.7rem;
     ${({ beforeTag }) =>
       beforeTag &&
@@ -72,8 +71,13 @@ const HeaderTwo = (props) => {
     setTimeout(() => setLetterClass("text-animate-hover"), 4000);
   }, []);
 
+  const defaultStyle = {
+    fontSize: "4.5rem",
+    lineHeight: "4rem",
+  };
+
   return (
-    <Header {...props}>
+    <Header {...props} style={props.style ? { ...props.style } : defaultStyle}>
       <AnimateLetters
         letterClass={letterClass}
         strArray={[...props.children]}

@@ -14,12 +14,29 @@ const Skills = () => {
           <header>
             <HeaderTwo
               aria-label="Skills & Experience"
-              fontsize="6.3rem"
+              style={{
+                margin: 0,
+                fontSize: "5rem",
+                lineHeight: "5rem",
+              }}
               beforeTag={true}
-              afterTag={true}
+              afterTag={false}
               delay={5}
             >
-              Skills & Experience
+              Skills &
+            </HeaderTwo>{" "}
+            <HeaderTwo
+              aria-label="Experience"
+              style={{
+                // margin: 0,
+                fontSize: "5rem",
+                lineHeight: "5rem",
+              }}
+              beforeTag={false}
+              afterTag={true}
+              delay={15}
+            >
+              Experience
             </HeaderTwo>
           </header>
           {/* <br /> */}

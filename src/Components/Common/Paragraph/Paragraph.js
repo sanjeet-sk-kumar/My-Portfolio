@@ -63,6 +63,10 @@ const Para = styledComponents.p`
         left: -1.5rem;
       }
     `}
+
+    &:first-child {
+      margin-top: 20px;
+    }
     }
     
 `;
