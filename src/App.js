@@ -18,9 +18,9 @@ const Skills = React.lazy(() => import("./Components/Skills/Skills"));
 const Work = React.lazy(() => import("./Components/Work/Work"));
 
 const override = css`
-  position: absolute;
-  top: 50%;
   left: 50%;
+  margin-left: -4em;
+  top: 50vh;
 `;
 
 function App() {
