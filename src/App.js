@@ -18,16 +18,16 @@ const Skills = React.lazy(() => import("./Components/Skills/Skills"));
 const Work = React.lazy(() => import("./Components/Work/Work"));
 
 const override = css`
-  left: 50%;
-  margin-left: -4em;
+  left: 45%;
   top: 50vh;
 `;
 
 function App() {
   return (
     <div className="App">
+      {/* <HashLoader color="#08FDD8" css={override} size={50} /> */}
       <React.Suspense
-        fallback={<HashLoader color="#08FDD8" css={override} size={150} />}
+        fallback={<HashLoader color="#08FDD8" css={override} size={50} />}
       >
         <Routes>
           <Route exact path="/" element={<Layout />}>
