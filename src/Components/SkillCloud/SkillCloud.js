@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import tagCanvas from "tag-canvas";
-// import tagCanvas from "react-tag-cloud";
 import "./SkillCloud.scss";
 
 const SkillCloud = ({ techStack = [] }) => {

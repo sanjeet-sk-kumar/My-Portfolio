@@ -20,7 +20,7 @@ const Para = styledComponents.p`
             left: -1rem;
             left: -1rem;
             opacity:0;
-            animation: fadeIn 1s 4.1s forwards;
+            animation: fadeIn 1s 2.6s forwards;
         }
       `}
     ${({ afterTag }) =>
@@ -35,11 +35,34 @@ const Para = styledComponents.p`
             left: -1rem;
             bottom: -2rem;
             opacity: 0;
-            animation: fadeIn 1s 2s forwards;
+            animation: fadeIn 1s 2.6s forwards;
         }
     `}
     @media (max-width: 480px) {
        font-size: 1rem;
+    }
+
+    @media (max-width: 1300px) {
+      margin: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      ${({ afterTag }) =>
+        afterTag &&
+        `
+        &:after{
+          font-size: 14px;
+          left: -1.5rem;
+        }
+      `}
+
+      ${({ beforeTag }) =>
+        beforeTag &&
+        `
+      &:before{
+        font-size: 14px;
+        left: -1.5rem;
+      }
+    `}
     }
     
 `;

@@ -8,7 +8,7 @@ const Menu = ({ onMenuItemCLick }) => {
   return (
     <menu className="main-menu">
       <div className="main-menu__top">
-        <Link className="logo" to="/" onClick={() => onMenuItemCLick("/home")}>
+        <Link className="logo" to="/" onClick={() => onMenuItemCLick("/")}>
           <img src={logoS} alt="logo" height="100" width="80" />
           <span>Sanjeet</span>
         </Link>

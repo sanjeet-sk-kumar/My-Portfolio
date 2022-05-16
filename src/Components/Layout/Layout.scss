@@ -90,7 +90,7 @@
 }
 
 /* For Mobile Devices */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .mbtn {
     width: 1.5rem;
     height: 1.5rem;
@@ -98,6 +98,10 @@
   canvas {
     width: 550px !important;
     height: 550px;
+  }
+
+  .tags {
+    left: 0.5rem !important;
   }
 }
 
@@ -120,8 +124,22 @@
     border-radius: 3px;
   }
 
+  .tags {
+    left: 1.5rem;
+    font-size: 14px;
+  }
+
+  .top-tags::after {
+    font-size: 14px;
+    margin-left: 0.5rem;
+  }
   .mbtn svg {
     width: 3rem;
+  }
+
+  .bottom-tags::before {
+    font-size: 14px;
+    margin-left: 0.5rem;
   }
 
   .mobileOpen .main-menu > * {

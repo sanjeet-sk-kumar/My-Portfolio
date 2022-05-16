@@ -42,6 +42,28 @@ const Header = styledComponents.h2`
             animation: fadeIn 1s 2s forwards;
         }
     `}
+
+    @media (max-width: 1300px){
+      font-size: 4.5rem;
+      line-height: 4rem;
+      ${({ afterTag }) =>
+        afterTag &&
+        `
+        &:after{
+          font-size: 14px;
+          bottom: -2.5rem;
+        }
+      `}
+
+      ${({ beforeTag }) =>
+        beforeTag &&
+        `
+      &:before{
+        font-size: 14px;
+        margin-top: -2.5rem;
+      }
+    `}
+    }
     
 `;
 const HeaderTwo = (props) => {
