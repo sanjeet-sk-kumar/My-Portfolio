@@ -35,8 +35,11 @@ a:hover {
 @media (max-width: 480px) {
   .text-zone h2,
   h2 {
-    font-size: 1.9rem;
-    line-height: 5.2rem;
+    font-size: 1.9rem !important;
+  }
+
+  h2:last-child {
+    margin-bottom: 50px !important;
   }
 
   .page-skills .text-zone {

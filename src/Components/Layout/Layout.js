@@ -62,14 +62,14 @@ const Layout = () => {
           <FaBars
             className="mbtn-op"
             onClick={() => changeMenuBtn("open")}
-            size="50"
+            size="30"
           />
         )}
         {isMenuDisplay === "close" && (
           <FaTimes
             className="mbtn-cl"
             onClick={() => changeMenuBtn("close")}
-            size="50"
+            size="30"
           />
         )}
       </div>

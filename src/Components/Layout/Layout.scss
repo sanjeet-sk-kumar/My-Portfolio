@@ -94,6 +94,7 @@
   .mbtn {
     width: 1.5rem;
     height: 1.5rem;
+    cursor: pointer;
   }
   canvas {
     width: 550px !important;
@@ -122,6 +123,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 3px;
+    cursor: pointer;
   }
 
   .tags {
@@ -133,9 +135,9 @@
     font-size: 14px;
     margin-left: 0.5rem;
   }
-  .mbtn svg {
-    width: 3rem;
-  }
+  // .mbtn svg {
+  //   width: 3rem;
+  // }
 
   .bottom-tags::before {
     font-size: 14px;
@@ -155,6 +157,7 @@
     top: 1rem;
     right: auto;
     left: 10px;
-    font-size: 18px;
+    font-size: 15px;
+    background: #1d1d1d;
   }
 }
