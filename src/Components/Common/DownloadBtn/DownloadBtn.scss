@@ -1,0 +1,161 @@
+// @import "compass/css3";
+
+// Colors
+
+$gray: #232323;
+$primary: #08fdd8;
+$secondary: #c41564;
+
+// Fonts
+
+$sans: "Source Sans Pro";
+
+// Button Sizes
+
+$btnH: 4rem;
+$btnD: 4rem;
+$btnW: 18rem;
+
+// Initial Styles
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+// Reset
+
+// Base Button Styles
+
+.button,
+[class*="button-"] {
+  background: $primary;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: $gray;
+  font: 200 1.5rem $sans;
+  text: {
+    transform: capitalize;
+    decoration: none;
+    align: left;
+  }
+  transition: 0.5s linear all;
+
+  &:hover {
+    background: lighten($primary, 20%);
+  }
+}
+
+// Download Button
+
+.download-wrap {
+  perspective: 80rem;
+  perspective-origin: 50% 50% 0;
+  width: $btnW;
+  height: $btnH;
+  margin: 0 auto;
+}
+
+.download {
+  position: relative;
+  width: $btnW;
+  height: $btnH;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 0;
+  transform: rotateX(0deg);
+  transition: 0.2s linear all;
+
+  &.is-active {
+    transform: rotateX(90deg) translateZ($btnH/2);
+
+    .meter-progress {
+      right: 0%;
+    }
+  }
+}
+
+.button-download,
+.meter {
+  position: relative;
+  width: $btnW;
+  height: $btnH;
+  font: {
+    size: 1.5rem;
+    weight: 200;
+  }
+  line-height: $btnH;
+  padding: 0 2rem;
+  transform-origin: top center;
+}
+
+// Download Icon
+
+.icon-wrap {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: $btnH;
+  padding-top: 1.66rem;
+  //   background: rgba(black, 0.1);
+}
+
+.icon-download {
+  position: relative;
+  display: block;
+  color: #fd1056;
+  width: 2.5rem;
+  height: 1rem;
+  margin: auto;
+  border: solid 0.5rem $gray;
+  border-top: none;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    animation: icon-bounce 0.5s infinite alternate;
+  }
+
+  &:before {
+    left: 0.5rem;
+    top: -0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: $gray;
+  }
+
+  &:after {
+    left: 0.25rem;
+    top: -0.125rem;
+    width: 0;
+    height: 0;
+    border-left: solid 0.5rem transparent;
+    border-right: solid 0.5rem transparent;
+    border-top: solid 0.5rem $gray;
+  }
+}
+
+// Animations
+
+@keyframes icon-bounce {
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes white-pulse {
+  from {
+    color: rgba(white, 0.2);
+  }
+
+  to {
+    color: rgba(white, 0.5);
+  }
+}

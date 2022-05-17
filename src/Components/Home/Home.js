@@ -3,6 +3,7 @@ import Button from "../Common/Button/Button";
 import AnimateLetters from "../Common/AnimateLetters/AnimateLetters";
 import "./Home.scss";
 import logoS from "../../assets/images/s.png";
+import avatar from "../../assets/images/avatar.png";
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = ["a", "n", "j", "e", "e", "t", ","];
@@ -85,7 +86,11 @@ const Home = () => {
             Front End Developer / Javascript Enthusiast
           </p>
           <br />
+
           <Button to="/contact" text="Contact Me" />
+        </div>
+        <div className="avatar-box">
+          <img src={avatar} alt="sanjeet's avatar" height={600} width={400} />
         </div>
       </section>
     </>

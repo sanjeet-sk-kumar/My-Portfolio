@@ -11,7 +11,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       { test: /\.js$/, use: ["babel-loader"] },
-      { test: /\.(png|jpe?g|gif|mp3)$/i, use: ["file-loader"] },
+      { test: /\.(png|jpe?g|gif|mp3|pdf)$/i, use: ["file-loader"] },
     ],
   },
   output: {

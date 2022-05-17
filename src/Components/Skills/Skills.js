@@ -3,6 +3,7 @@ import Chart from "../Common/Chart/Chart";
 import { Link } from "react-router-dom";
 import ExperienceCard from "../Common/ExperienceCard/ExperienceCard";
 import Paragraph from "../Common/Paragraph/Paragraph";
+import resume from "../../assets/resume/Sanjeet-Resume.pdf";
 import "./Skills.scss";
 import HeaderTwo from "../Common/HeaderTwo/HeaderTwo";
 
@@ -71,7 +72,11 @@ const Skills = () => {
             >
               LinkedIn
             </a>{" "}
-            profile for more details or just <Link to="/contact">contact</Link>
+            profile for more details. Also you can checkout my cv on this{" "}
+            <a href={resume} download="Sanjeet'sResume">
+              link
+            </a>{" "}
+            or feel free to <Link to="/contact">contact</Link>
             {" me."}
           </Paragraph>
         </div>

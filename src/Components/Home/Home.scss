@@ -205,6 +205,21 @@
   color: #08fdd8;
 }
 
+.avatar-box img {
+  opacity: 0;
+  animation: fadeIn 2s 4.1s forwards;
+  z-index: -1;
+  position: absolute;
+  right: auto;
+  top: 0;
+  // border: 1px solid;
+  bottom: -189px;
+}
+
+// .avatar-box {
+//   position: relative;
+// }
+
 @media screen and (max-width: 480px) {
   .fake-magicwall ul li {
     width: 50%;
@@ -236,6 +251,10 @@
     bottom: -28px;
     right: -21px;
     font-size: 14px;
+  }
+
+  .avatar-box {
+    display: none;
   }
 
   #section-home .text-zone p {
@@ -341,4 +360,10 @@
   //   .fake-magicwall ul li {
   //     width: 33%;
   //   }
+}
+
+@media (min-width: 1300px) {
+  .avatar-box {
+    display: block;
+  }
 }

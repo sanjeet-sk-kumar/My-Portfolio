@@ -9,6 +9,7 @@ import { css } from "@emotion/react";
 import About from "./Components/About/About";
 // import Skills from "./Components/Skills/Skills";
 import { Routes, Route } from "react-router-dom";
+// import DownloadBtn from "./Components/Common/DownloadBtn/DownloadBtn";
 
 const Home = React.lazy(() => import("./Components/Home/Home"));
 const Layout = React.lazy(() => import("./Components/Layout/Layout"));
